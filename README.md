@@ -1,5 +1,7 @@
 # LLM-Bais-in-Emergency
 
+LLM Bias Measurement Toolkit
+
 Overview
 - Phase 1: Word Association Test (WAT) to quantify bias with a BiasScore in [-1,1].
 - Phase 2: Decision bias test that evaluates model choices in emergency scenarios.
@@ -18,6 +20,11 @@ API Key
 - Use OpenAI-compatible API via environment variable `OPENAI_API_KEY`.
 - Optional: set `OPENAI_BASE_URL` for an API-compatible endpoint.
 - If neither the environment variable nor `--api-key` is supplied, run with `--mock`; otherwise the CLI raises an error to prevent silent mock outputs (e.g. `A A A`). Use `--mock` explicitly for offline testing.
+
+Configuration Files
+- `.env.example`: Template for environment variables (copy to `.env` and configure)
+- `.gitignore`: Ignores sensitive files (`.env`, output files, etc.)
+- All file paths are relative to project root, suitable for version control
 
 CLI Usage
 - Phase 1 (WAT + BiasScore):
